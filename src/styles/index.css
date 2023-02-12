@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  *{
+    @apply font-sans;
+  }
+  .App{
+    @apply flex h-screen w-screen overflow-hidden relative;
+  }
+
+/* CANVAS */
+  .canvas{
+    @apply w-full h-full;
+  }
+/* Navigation Menu */
+  .navigation-box{
+    @apply flex flex-col justify-between items-center py-4 px-2 h-screen bg-blue-900;
+
+    .nav-btns{
+      @apply flex flex-col justify-center items-center gap-5;
+
+      & button{
+        @apply text-white font-semibold text-lg;
+      }
+      
+    }
+
+    & div{
+      button{
+        @apply text-white font-semibold text-lg;
+      }
+    }
+
+  }
+
+/* CALCULATOR */
+
+  .calculator{
+    @apply flex flex-col h-2/3 w-3/12 rounded-2xl items-center bg-blue-200 absolute;
+
+    & .title{
+      @apply flex justify-between items-center bg-blue-900 w-full rounded-tr-2xl rounded-tl-2xl p-2 cursor-move;
+
+      & p{
+        @apply text-white text-3xl font-medium;
+      }
+
+      & div{
+        @apply text-white text-2xl font-medium cursor-pointer;
+      }
+    }
+
+    & form{
+      @apply flex w-full h-2/6 justify-center items-center;
+
+      input{
+        @apply w-96 p-0.5 h-1/2 text-2xl outline-none rounded-2xl;
+      }
+    }
+
+    & .btns{
+      @apply grid grid-cols-4 items-center gap-0.5 h-full w-full p-3;
+
+      button{
+        @apply bg-blue-900 text-white rounded-2xl h-full m-auto text-2xl leading-9;
+      }
+    }
+
+
+  }
+
+  
+}
+
+
+
+.about{
+  @apply flex justify-center items-center;
+
+  & .details{
+    @apply flex;
+  }
+}
